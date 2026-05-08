@@ -16,8 +16,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "https://akash-portfolio-theta-nine.vercel.app",        # your exact Vercel URL
-        "https://akash-portfolio-git-main-YOUR_USERNAME.vercel.app",  # preview URL
-        "https://*.vercel.app",                       # all vercel previews
+        # "https://akash-portfolio-git-main-YOUR_USERNAME.vercel.app",  # preview URL
+        # "https://*.vercel.app",                       # all vercel previews
     ],
     allow_methods=["*"],
     allow_headers=["*"],
