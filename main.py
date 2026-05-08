@@ -11,6 +11,19 @@ import certifi
 from fastapi.responses import FileResponse, Response
 import logging
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "https://akash-portfolio-theta-nine.vercel.app",        # your exact Vercel URL
+        "https://akash-portfolio-git-main-YOUR_USERNAME.vercel.app",  # preview URL
+        "https://*.vercel.app",                       # all vercel previews
+    ],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 app = FastAPI()
